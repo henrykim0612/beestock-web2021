@@ -2,6 +2,7 @@ const topMain = (function() {
 
   function init() {
     initBurgerMenu();
+    initAdsense();
     checkCurrentUserRole();
     setLayout();
     // showNoticeBadge();
@@ -31,6 +32,19 @@ const topMain = (function() {
           $target.classList.toggle('is-active');
         });
       });
+    }
+  }
+
+  function initAdsense() {
+    if (cmmUtils.getRole() != null && cmmUtils.getRoleNm() !== '[ROLE_BASIC]') {
+      const top = document.getElementById('adsenseTop');
+      if (top != null) {
+        top.remove();
+      }
+      const bottom = document.getElementById('adsenseBottom');
+      if (bottom != null) {
+        bottom.remove();
+      }
     }
   }
 
