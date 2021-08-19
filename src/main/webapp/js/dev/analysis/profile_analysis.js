@@ -2252,7 +2252,8 @@ const main = (function() {
         title: {
           text: global.selectedProfileType === '1' ? '(단위: 백만원)' : '(단위: 백만달러)',
           textStyle: {
-            fontSize: 11
+            fontSize: 11,
+            color: 'grey'
           },
           top: 0,
           left: '88%'

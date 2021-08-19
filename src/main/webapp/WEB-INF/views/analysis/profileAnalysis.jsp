@@ -102,7 +102,7 @@
                     <div class="column is-full">
                         <div class="flex-col justify-content-center">
                             <div id="benchmarkChart" class="is-fullwidth" style="width: 950px; height: 300px;"></div>
-                            <p class="subtitle is-7 pl-5">※ 벤치마크 지수는 추정치이며 수치를 따지기 보다는"못함, 보통, 잘함, 아주 잘함" 정도로 인식하는 것이 좋습니다.</p>
+                            <p class="subtitle is-7 pl-5 has-text-grey"><span class="has-text-danger">*</span> 벤치마크 지수는 추정치이며 수치를 따지기 보다는"못함, 보통, 잘함, 아주 잘함" 정도로 인식하는 것이 좋습니다.</p>
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                     <div class="column is-full">
                         <div class="flex-col justify-content-center">
                             <div id="fundamentalChart" class="is-fullwidth" style="width: 950px; height: 300px;"></div>
-                            <p class="subtitle is-7 pl-5">※ 비상장회사, 해외자산, 현금, 채권, 파생상품 등은 포함되지 않은 수치입니다.</p>
+                            <p class="subtitle is-7 pl-5 has-text-grey"><span class="has-text-danger">*</span>비상장회사, 해외자산, 현금, 채권, 파생상품 등은 포함되지 않은 수치입니다.</p>
                         </div>
                     </div>
                 </div>
@@ -122,18 +122,20 @@
                 <%--아이디어 탭--%>
                 <div id="ideaCont" class="is-hidden">
                     <div class="columns">
-                        <div class="flex-row width-50per align-items-center ml-4">
-                            <p id="availableFileSize" class="subtitle is-7">첨부 이미지 총 사용량: <span id="usedFileSize">0</span> / <span id="maxFileSize">1000 MB</span></p>
-                        </div>
-                        <div class="flex-row justify-content-end width-50per">
-                            <button id="btnMod" onclick="main.showIdeaModal()" class="button is-primary is-small mr-4">
-                                <span class="icon is-small"><i class="fas fa-pencil-alt"></i></span>
-                                <span>아이디어 추가</span>
-                            </button>
+                        <div class="flex-row justify-content-start width-100per">
+                            <div class="flex-row align-items-center pl-4 width-50per">
+                                <p id="availableFileSize" class="subtitle is-7 has-text-grey">첨부 이미지 총 사용량: <span id="usedFileSize">0</span> / <span id="maxFileSize">1000 MB</span></p>
+                            </div>
+                            <div class="flex-row justify-content-end pr-2 width-50per">
+                                <button id="btnMod" onclick="main.showIdeaModal()" class="button is-primary is-small mr-4">
+                                    <span class="icon is-small"><i class="fas fa-pencil-alt"></i></span>
+                                    <span>아이디어 추가</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="columns">
-                        <div class="column is-full height250px">
+                        <div class="column is-full" style="min-height: 300px;">
                             <div class="table-container mt-3">
                                 <table id="ideaGrid" class="table is-narrow is-hoverable is-fullwidth"></table>
                             </div>
@@ -146,7 +148,7 @@
             <div id="linkCont" class="is-hidden analysis-tab-content__link">
                 <div class="columns">
                     <div class="column is-full">
-                        <div id="profileLinkDiv" class="flex-col justify-content-center">
+                        <div id="profileLinkDiv" class="flex-col justify-content-start" style="width: 950px; min-height: 300px;">
                         </div>
                     </div>
                 </div>
@@ -155,34 +157,34 @@
             <div id="infoCont" class="is-hidden analysis-tab-content">
                 <div class="columns">
                     <div class="column is-full">
-                        <div id="infoDiv">
+                        <div id="infoDiv" class="pl-5 pr-5" style="width: 950px; min-height: 300px;">
                         </div>
                     </div>
                 </div>
             </div>
             <%--유의사항 탭--%>
             <div id="notiCont" class="is-hidden analysis-tab-content">
-                <div class="columns">
-                    <div class="column is-full ml-5">
+                <div class="columns" style="width: 950px; min-height: 300px;">
+                    <div class="column is-full">
                         <c:if test="${profileVo.profileType eq '1'}">
-                            <ol>
-                                <li>액면분할, 유.무상 증자, 감자 이슈에 대한 수정 보유수량을 제공하지 않습니다.</li>
-                                <li>전분기대비 급격한 보유수량 증가가 생긴다면 해당이슈에 대해서 검토하시기 바랍니다</li>
-                                <li>예시) 삼성전자가 액면분할을 1주 -> 50주로 단행하였을 때 운용사의 삼성전자 주식 보유량은 50배씩 늘어난 것으로 보이게 되지만, 실은 액면분할 효과일 뿐 주식취득은 없습니다.</li>
-                                <li>매수가가 비정상적으로 높다면 마찬가지로 액면분할 관련이슈에 대하여 검토하시기 바랍니다.</li>
-                                <li>현재가, 수익률, 포트폴리오 시가총액은 발표된 보고서의 최근 분기만 최신주가를 반영하여 만들어 집니다.</li>
-                                <li>예시) 2018-2Q의 보고서를 본다면 현재가, 수익률, 포트폴리오 시가총액은 2018년 6월 30일 주가를 기반으로 보여 집니다.</li>
-                            </ol>
+                            <ul class="pl-5 pr-5">
+                                <li>1.액면분할, 유.무상 증자, 감자 이슈에 대한 수정 보유수량을 제공하지 않습니다.</li>
+                                <li>2.전분기대비 급격한 보유수량 증가가 생긴다면 해당이슈에 대해서 검토하시기 바랍니다</li>
+                                <li>3.예시) 삼성전자가 액면분할을 1주 -> 50주로 단행하였을 때 운용사의 삼성전자 주식 보유량은 50배씩 늘어난 것으로 보이게 되지만, 실은 액면분할 효과일 뿐 주식취득은 없습니다.</li>
+                                <li>4.매수가가 비정상적으로 높다면 마찬가지로 액면분할 관련이슈에 대하여 검토하시기 바랍니다.</li>
+                                <li>5.현재가, 수익률, 포트폴리오 시가총액은 발표된 보고서의 최근 분기만 최신주가를 반영하여 만들어 집니다.</li>
+                                <li>6.예시) 2018-2Q의 보고서를 본다면 현재가, 수익률, 포트폴리오 시가총액은 2018년 6월 30일 주가를 기반으로 보여 집니다.</li>
+                            </ul>
                         </c:if>
                         <c:if test="${profileVo.profileType eq '2'}">
-                            <ol>
-                                <li>보유종목은 미국 내 상장기업만 표시됩니다(예시: 워렌버핏은 일본의 상사기업 5곳을 보유하고 있지만 표시되지 않습니다).</li>
-                                <li>벤치마크지수는 시간가중수익률을 기반으로 만들어졌습니다.</li>
-                                <li>채권, 파생상품 포지션은 표시되지 않습니다.</li>
-                                <li>현재가, 수익률, 포트폴리오 시가총액은 발표된 보고서의 최근 분기만 최신주가를 반영하여 만들어 집니다.</li>
-                                <li>예시) 2018-2Q의 보고서를 본다면 현재가, 수익률, 포트폴리오 시가총액은 2018년 6월 30일 주가를 기반으로 보여 집니다.</li>
-                                <li>운용자산 규모축소, 확대로 밸류에이션과 주가움직임과 무관하게 매수.매도가 일어 났을 수도 있습니다. 이부분에 유념하시기 바랍니다.</li>
-                            </ol>
+                            <ul class="pl-5 pr-5">
+                                <li>1.보유종목은 미국 내 상장기업만 표시됩니다(예시: 워렌버핏은 일본의 상사기업 5곳을 보유하고 있지만 표시되지 않습니다).</li>
+                                <li>2.벤치마크지수는 시간가중수익률을 기반으로 만들어졌습니다.</li>
+                                <li>3.채권, 파생상품 포지션은 표시되지 않습니다.</li>
+                                <li>4.현재가, 수익률, 포트폴리오 시가총액은 발표된 보고서의 최근 분기만 최신주가를 반영하여 만들어 집니다.</li>
+                                <li>5.예시) 2018-2Q의 보고서를 본다면 현재가, 수익률, 포트폴리오 시가총액은 2018년 6월 30일 주가를 기반으로 보여 집니다.</li>
+                                <li>6.운용자산 규모축소, 확대로 밸류에이션과 주가움직임과 무관하게 매수.매도가 일어 났을 수도 있습니다. 이부분에 유념하시기 바랍니다.</li>
+                            </ul>
                         </c:if>
                     </div>
                 </div>

@@ -7,14 +7,14 @@ const main = (function () {
 
   function init() {
     if (cmmUtils.getRole() != null) { // Guest 가 아닌 경우에만
-      initIamport();
+      initIamPort();
     }
     initPrices();
     initAccordion();
     initDOMEvents();
   }
 
-  async function initIamport() {
+  async function initIamPort() {
     const response = await cmmUtils.awaitAxiosGet({url: '/api/v1/import/keys'});
     impKey = response.find(function(v) { return v.codeId === 'K0001'; }).codeName;
     pg = response.find(function(v) { return v.codeId === 'K0002'; }).codeName;
@@ -100,6 +100,10 @@ const main = (function () {
 
   // 업그레이드
   async function upgrade(grade) {
+    if (cmmUtils.isMobile()) {
+      cmmUtils.showWarningModal('결제 안내', '모바일 환경에서는 결제가 불가합니다. 이용에 불편을 드려 죄송합니다.');
+      return false;
+    }
     cmmUtils.resetCheckedItems('chkNoti');
     showPremiumPlusTerm(grade);
     setSelectedGrade(grade);
@@ -121,6 +125,10 @@ const main = (function () {
   }
 
   async function payment() {
+    if (cmmUtils.isMobile()) {
+      cmmUtils.showWarningModal('결제 안내', '모바일 환경에서는 결제가 불가합니다. 이용에 불편을 드려 죄송합니다.');
+      return false;
+    }
     const price = await cmmUtils.awaitAxiosGet({url: '/api/v1/login/price/' + selectedMonth + '/' + selectedGrade});
     if (price > 0) {
       const dueDate = getDueDate();

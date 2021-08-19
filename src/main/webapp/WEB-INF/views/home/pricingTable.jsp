@@ -3,9 +3,10 @@
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <script src="${pageContext.request.contextPath}/${jsDir}/home/pricing_table.js" type="text/javascript"></script>
 
-<div class="notification is-white mb-0">
-    <p><span class="has-text-danger">﹡</span> 사이트 이용이 마음에 드신다면 <strong style="text-decoration: underline;">등급 업그레이드</strong>로 더욱 편리하고 정리된 기능들을 이용해보세요.</p>
-    <p><span class="has-text-danger">﹡</span> 유료 서비스 결제 금액은 모두 <strong style="text-decoration: underline;">부가세가 포함</strong>된 금액입니다.</p>
+<div class="notification is-white mb-0 has-text-grey">
+    <p><span class="has-text-danger">﹡</span> 사이트 이용이 마음에 드신다면 <strong>등급 업그레이드</strong>로 더욱 편리하고 정리된 기능들을 이용해보세요.</p>
+    <p><span class="has-text-danger">﹡</span> 유료 서비스 결제 금액은 모두 <strong>부가세가 포함</strong>된 금액입니다.</p>
+    <p><span class="has-text-danger">﹡</span> 가상계좌 결제 방식으로 인히여 현재 <strong>모바일 환경</strong>에서는 결제를 진행할 수 없습니다.</p>
 </div>
 
 <%--<sec:authorize access="isAuthenticated()">--%>
@@ -31,10 +32,11 @@
 <%--</sec:authorize>--%>
 
 <article class="message is-warning">
-    <div id="rightChartMsgBody" class="message-body">
-        <p class="flex-row align-items-center"><span class="icon has-text-danger mr-2"><i class="fas fa-exclamation-triangle"></i></span>
-            유사투자 자문업 성행으로 피해사례가 늘어나 주식관련 정보를 제공하는 유료 서비스는 <strong class="ml-1" style="text-decoration: underline;">신용카드 결제</strong>가 전면적으로 불가한 상태이므로,<strong class="ml-1" style="text-decoration: underline;">가상계좌 이체</strong>로 운영되고 있음을 양해 부탁드립니다.
-        </p>
+    <div id="rightChartMsgBody" class="message-body has-text-grey">
+        유사투자 자문업 성행으로 피해사례가 늘어나 주식관련 정보를 제공하는 유료 서비스는 <strong>신용카드 결제</strong>가 전면적으로 불가한 상태이므로, <strong>가상계좌 이체</strong>로 운영되고 있음을 양해 부탁드립니다.
+<%--        <p class="flex-row align-items-center"><span class="icon has-text-warning mr-2"><i class="fas fa-exclamation-triangle"></i></span>--%>
+<%--            <strong class="ml-1" style="text-decoration: underline;">모바일</strong> 환경에서는 결제를 지원하지 않는점 양해 부탁드립니다.--%>
+<%--        </p>--%>
     </div>
 </article>
 
