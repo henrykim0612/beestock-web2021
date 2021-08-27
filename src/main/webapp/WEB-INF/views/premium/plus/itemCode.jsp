@@ -76,7 +76,7 @@
             <div class="flex-row justify-content-center">
                 <article class="message is-warning">
                     <div id="rightChartMsgBody" class="message-body">
-                        <p class="flex-row align-items-center"><span class="icon has-text-warning mr-2"><i class="fas fa-exclamation-triangle"></i></span><strong>미공시</strong>로 표기된 것은 제출된 운용보고서가 <strong>비공개</strong>된 것입니다. 위 차트 상에는 <strong>전량매도</strong>로 보일 수 있으나, <strong>알수없음</strong>으로 보는 것이 맞습니다.</p>
+                        <p><span class="icon has-text-warning mr-2"><i class="fas fa-exclamation-triangle"></i></span><strong>미공시</strong>로 표기된 것은 제출된 운용보고서가 <strong>비공개</strong>된 것입니다. 위 차트 상에는 <strong>전량매도</strong>로 보일 수 있으나, <strong>알수없음</strong>으로 보는 것이 맞습니다.</p>
                     </div>
                 </article>
             </div>
