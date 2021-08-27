@@ -102,7 +102,7 @@
                     <div class="column is-full">
                         <div class="flex-col justify-content-center">
                             <div id="benchmarkChart" class="is-fullwidth" style="width: 950px; height: 300px;"></div>
-                            <p class="subtitle is-7 pl-5 has-text-grey"><span class="has-text-danger">*</span> 벤치마크 지수는 추정치이며 수치를 따지기 보다는"못함, 보통, 잘함, 아주 잘함" 정도로 인식하는 것이 좋습니다.</p>
+                            <p class="subtitle is-7 pl-5 has-text-grey"><span class="has-text-danger mr-1">*</span> 벤치마크 지수는 추정치이며 수치를 따지기 보다는"못함, 보통, 잘함, 아주 잘함" 정도로 인식하는 것이 좋습니다.</p>
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                     <div class="column is-full">
                         <div class="flex-col justify-content-center">
                             <div id="fundamentalChart" class="is-fullwidth" style="width: 950px; height: 300px;"></div>
-                            <p class="subtitle is-7 pl-5 has-text-grey"><span class="has-text-danger">*</span>비상장회사, 해외자산, 현금, 채권, 파생상품 등은 포함되지 않은 수치입니다.</p>
+                            <p class="subtitle is-7 pl-5 has-text-grey"><span class="has-text-danger mr-1">*</span>비상장회사, 해외자산, 현금, 채권, 파생상품 등은 포함되지 않은 수치입니다.</p>
                         </div>
                     </div>
                 </div>
@@ -693,7 +693,7 @@
                 <div class="flex-row justify-content-center">
                     <article class="message is-warning">
                         <div id="rightChartMsgBody" class="message-body">
-                            <p class="flex-row align-items-center"><span class="icon has-text-warning mr-2"><i class="fas fa-exclamation-triangle"></i></span><strong>미공시</strong>로 표기된 것은 제출된 운용보고서가 <strong>비공개</strong>된 것입니다. 위 차트 상에는 <strong>전량매도</strong>로 보일 수 있으나, <strong>알수없음</strong>으로 보는 것이 맞습니다.</p>
+                            <p><span class="icon has-text-warning mr-2"><i class="fas fa-exclamation-triangle"></i></span><strong>미공시</strong>로 표기된 것은 제출된 운용보고서가 <strong>비공개</strong>된 것입니다. 위 차트 상에는 <strong>전량매도</strong>로 보일 수 있으나, <strong>알수없음</strong>으로 보는 것이 맞습니다.</p>
                         </div>
                     </article>
                 </div>
