@@ -656,9 +656,14 @@ const cmmUtils = (function () {
   }
 
   // yyyy-MM-dd 체크
-  function checkYYYYMMDDPattern(value) {
-    const dayRegExp = /^(19|20)\d{2}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[0-1])$/;
-    if (dayRegExp.test(value)) {
+  function checkYYYYMMDDPattern(value, noHyphen) {
+    let regExp;
+    if (noHyphen != null && noHyphen) {
+      regExp = /^(19|20)\d{2}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[0-1])$/;
+    } else {
+      regExp = /^(19|20)\d{2}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[0-1])$/;
+    }
+    if (regExp.test(value)) {
       return isValidDate(value)
     } else {
       return false;
