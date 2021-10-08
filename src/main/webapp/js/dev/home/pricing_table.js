@@ -5,11 +5,11 @@ const main = (function () {
   let impKey = null;
   let pg = null;
 
-  function init() {
+  async function init() {
     if (cmmUtils.getRole() != null) { // Guest 가 아닌 경우에만
-      initIamPort();
+      await initIamPort();
     }
-    initPrices();
+    await initPrices();
     initAccordion();
     initDOMEvents();
   }
@@ -121,7 +121,7 @@ const main = (function () {
     if (day.toString().length === 1) {
       day = '0' + day;
     }
-    return year + month + day + '1800'; // 18시까지
+    return year.toString() + month.toString() + day.toString() + '1800'; // 18시까지
   }
 
   async function payment() {

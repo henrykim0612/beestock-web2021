@@ -3,40 +3,18 @@
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <script src="${pageContext.request.contextPath}/${jsDir}/home/pricing_table.js" type="text/javascript"></script>
 
-<div class="notification is-white mb-0 has-text-grey">
-    <p><span class="has-text-danger">﹡</span> 사이트 이용이 마음에 드신다면 <strong>등급 업그레이드</strong>로 더욱 편리하고 정리된 기능들을 이용해보세요.</p>
-    <p><span class="has-text-danger">﹡</span> 유료 서비스 결제 금액은 모두 <strong>부가세가 포함</strong>된 금액입니다.</p>
-    <p><span class="has-text-danger">﹡</span> 가상계좌 결제 방식으로 인히여 현재 <strong>모바일 환경</strong>에서는 결제를 진행할 수 없습니다.</p>
-</div>
-
-<%--<sec:authorize access="isAuthenticated()">--%>
-<%--    <article class="message is-dark">--%>
-<%--        <div class="message-body">--%>
-<%--            <sec:authorize access="hasRole('ROLE_BASIC')">--%>
-<%--                <p>현재 <strong><sec:authentication property="principal.userNm"/></strong>님은 <strong class="has-text-primary">Basic</strong> 등급을 이용하고 계십니다.</p>--%>
-<%--            </sec:authorize>--%>
-<%--            <sec:authorize access="hasRole('ROLE_STANDARD')">--%>
-<%--                <p>현재 <strong><sec:authentication property="principal.userNm"/></strong>님은 <strong class="has-text-info">Standard</strong> 등급을 이용하고 계십니다.</p>--%>
-<%--            </sec:authorize>--%>
-<%--            <sec:authorize access="hasRole('ROLE_PREMIUM')">--%>
-<%--                <p>현재 <strong><sec:authentication property="principal.userNm"/></strong>님은 <strong class="has-text-warning">Premium</strong> 등급을 이용하고 계십니다.</p>--%>
-<%--            </sec:authorize>--%>
-<%--            <sec:authorize access="hasRole('ROLE_PREMIUM_PLUS')">--%>
-<%--                <p>현재 <strong><sec:authentication property="principal.userNm"/></strong>님은 <strong class="has-text-danger">Premium Plus</strong> 등급을 이용하고 계십니다.</p>--%>
-<%--            </sec:authorize>--%>
-<%--            <sec:authorize access="hasRole('ROLE_ADMIN')">--%>
-<%--                <p>현재 <strong><sec:authentication property="principal.userNm"/></strong>님은 관리자 입니다.</p>--%>
-<%--            </sec:authorize>--%>
-<%--        </div>--%>
-<%--    </article>--%>
-<%--</sec:authorize>--%>
+<article class="message">
+    <div class="message-body">
+        <p>Beestock에 가입하시고 유능한 투자가들을 당신의 애널리스트로 만드십시오.</p>
+        <p>사이트 이용이 마음에 드신다면 <strong>등급 업그레이드</strong>로 더욱 편리하고 정리된 기능들을 이용해보세요.</p>
+        <p>유료 서비스 결제 금액은 모두 <strong>부가세가 포함</strong>된 금액입니다.</p>
+        <p>가상계좌 결제 방식으로 인하여 현재 <strong>모바일 환경</strong>에서는 결제를 진행할 수 없습니다.</p>
+    </div>
+</article>
 
 <article class="message is-warning">
     <div id="rightChartMsgBody" class="message-body has-text-grey">
-        유사투자 자문업 성행으로 피해사례가 늘어나 주식관련 정보를 제공하는 유료 서비스는 <strong>신용카드 결제</strong>가 전면적으로 불가한 상태이므로, <strong>가상계좌 이체</strong>로 운영되고 있음을 양해 부탁드립니다.
-<%--        <p class="flex-row align-items-center"><span class="icon has-text-warning mr-2"><i class="fas fa-exclamation-triangle"></i></span>--%>
-<%--            <strong class="ml-1" style="text-decoration: underline;">모바일</strong> 환경에서는 결제를 지원하지 않는점 양해 부탁드립니다.--%>
-<%--        </p>--%>
+        유사투자 자문업 성행으로 피해사례가 늘어나, 주식관련 정보를 제공하는 유료 서비스는 <strong>신용카드 결제</strong>가 전면적으로 불가한 상태이므로, <strong>가상계좌 이체</strong>로 운영되고 있음을 양해 부탁드립니다.
     </div>
 </article>
 

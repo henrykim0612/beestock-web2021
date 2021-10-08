@@ -656,9 +656,14 @@ const cmmUtils = (function () {
   }
 
   // yyyy-MM-dd 체크
-  function checkYYYYMMDDPattern(value) {
-    const dayRegExp = /^(19|20)\d{2}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[0-1])$/;
-    if (dayRegExp.test(value)) {
+  function checkYYYYMMDDPattern(value, noHyphen) {
+    let regExp;
+    if (noHyphen != null && noHyphen) {
+      regExp = /^(19|20)\d{2}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[0-1])$/;
+    } else {
+      regExp = /^(19|20)\d{2}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[0-1])$/;
+    }
+    if (regExp.test(value)) {
       return isValidDate(value)
     } else {
       return false;
@@ -699,11 +704,12 @@ const cmmUtils = (function () {
 
   function showToast(props) {
     const defaultAnimate = { in: 'fadeInDown', out: 'fadeOutUp' };
+    const defaultDuration = 3000;
     if (arguments.length === 0) {
       bulmaToast.toast({
         message: '저장되었습니다.',
         type: 'is-warning',
-        duration: 3000,
+        duration: defaultDuration,
         position: 'top-center',
         dismissible: true,
         animate: defaultAnimate
@@ -712,7 +718,7 @@ const cmmUtils = (function () {
       bulmaToast.toast({
         message: props['message'] != null ? props['message'] : '저장되었습니다.',
         type: props['type'] != null ? props['type'] : 'is-warning',
-        duration: props['duration'] != null ? props['duration'] : 3000,
+        duration: props['duration'] != null ? props['duration'] : defaultDuration,
         position: props['position'] != null ? props['position'] : 'top-center',
         dismissible: props['dismissible'] != null ? props['dismissible'] : true,
         animate: defaultAnimate

@@ -28,17 +28,8 @@
     <div id="topNav" class="navbar-menu">
         <div class="navbar-start">
             <a class="navbar-item" href="${pageContext.request.contextPath}/home/dashboard.do"><span class="icon has-text-warning mr-1"><i class="fas fa-address-card"></i></span>포트폴리오</a>
-
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link"><span class="icon has-text-warning mr-1"><i class="fas fa-book"></i></span>소개</a>
-                <div class="navbar-dropdown">
-                    <a class="navbar-item" href="${pageContext.request.contextPath}/home/about.do"><span class="icon has-text-dark mr-1"><i class="fas fa-microphone"></i></span>소개</a>
-<%--                    <a class="navbar-item" href=""><span class="icon has-text-dark mr-1"><i class="fab fa-glide-g"></i></span>가이드</a>--%>
-                </div>
-            </div>
-
+            <a class="navbar-item" href="${pageContext.request.contextPath}/home/about.do"><span class="icon has-text-warning mr-1"><i class="fas fa-book"></i></span>필독</a>
             <a class="navbar-item" href="${pageContext.request.contextPath}/home/itemcode.do"><span class="icon has-text-warning mr-1"><i class="fas fa-search-dollar"></i></span>종목검색</a>
-
             <%--구독자, 관리자 전용--%>
             <%--<sec:authorize access="hasAnyRole('ROLE_ADMIN', 'ROLE_PREMIUM', 'ROLE_PREMIUM_PLUS')">
                 <div class="navbar-item has-dropdown is-hoverable">

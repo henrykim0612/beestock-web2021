@@ -266,7 +266,6 @@ const main = (function() {
             formData.append('file' + i, fileObj.file);
           }
         }
-
         cmmUtils.axiosPost({
           url: '/api/v1/admin/stock/upload-in-stock-item',
           body: formData,
@@ -295,8 +294,8 @@ const main = (function() {
           cmmUtils.showIpModal('파일 확장자', fileName + '파일의 확장자를 확인해주세요(.xlsx 확장자만 업로드 가능합니다).');
           return false;
         }
-        if (!cmmUtils.checkYYYYMMDDPattern(fileName.split('.')[0])) {
-          cmmUtils.showIpModal('파일명', fileName + '파일명을 확인해주세요.');
+        if (!cmmUtils.checkYYYYMMDDPattern(fileName.split('.')[0], true)) {
+          cmmUtils.showIpModal('파일명', fileName + '파일명을 확인해주세요.(20210101 패턴으로)');
           return false;
         }
       }

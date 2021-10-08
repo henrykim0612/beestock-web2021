@@ -3,9 +3,10 @@
 
 <nav class="level">
     <div class="level-item">
-        <img style="width: 300px;" src="${pageContext.request.contextPath}/resources/images/logo/horizontal/logo.png">
+        <img style="width: 200px;" src="${pageContext.request.contextPath}/resources/images/logo/horizontal/logo.png">
     </div>
 </nav>
+
 <nav class="level">
     <div class="level-item has-text-left">
         <div class="field loginField">
@@ -188,7 +189,7 @@
                 <span><strong>서비스 이용약관 </strong>(필수)</span>
                 <div class="overflowY-auto pl-2 pr-2 pt-2" style="height: 160px; border: 1px solid grey;">
                     <span class="has-text-link">제1조 (목적)</span><br/>
-                    이 약관은 ㈜허니비소프트(이하 ’회사’)이 제공하는 서비스(이하 ‘서비스’)를 이용함에 있어 서비스 이용자(이하 ’회원’)와 회사 간의 권리, 의무 및 기타 제반 사항을 정함을 목적으로 합니다.<br/>
+                    이 약관은 허니비소프트(이하 ’회사’)가 제공하는 서비스(이하 ‘서비스’)를 이용함에 있어 서비스 이용자(이하 ’회원’)와 회사 간의 권리, 의무 및 기타 제반 사항을 정함을 목적으로 합니다.<br/>
                     <br/>
                     <span class="has-text-link">제2조 (용어의 정의)</span><br/>
                     ① 이 약관에서 사용하는 용어의 정의는 다음과 같습니다.<br/>
@@ -450,7 +451,7 @@
                 <span><strong>개인정보 수집 및 이용에 대한 안내 </strong>(필수)</span>
                 <div class="overflowY-auto pl-2 pr-2 pt-2" style="height: 160px; border: 1px solid grey;">
                     <span class="has-text-link">제 1조 개인정보의 처리 목적</span><br/>
-                    ㈜허니비소프트(이하 "회사")은 다음의 목적을 위하여 개인정보를 처리하고 있으며, 다음의 목적 이외의 용도로는 이용하지 않습니다.<br/>
+                    허니비소프트(이하 "회사")은 다음의 목적을 위하여 개인정보를 처리하고 있으며, 다음의 목적 이외의 용도로는 이용하지 않습니다.<br/>
                     <ul>
                         <li>고객 가입의사 확인</li>
                         <li>고객에 대한 서비스 제공에 따른 본인 식별ㆍ인증</li>
@@ -539,7 +540,7 @@
                     성명, 이메일주소, 휴대전화번호, 구매 및 예약 내역, 아이디<br/>
                     <br/>
                     <span class="has-text-link">제 2조 수집·이용 목적</span><br/>
-                    ㈜허니비소프트 상품 및 서비스 소개, 자사 서비스 판촉 안내 및 경품 발송(주소), 만족도 조사, 시장 조사<br/>
+                    허니비소프트 상품 및 서비스 소개, 자사 서비스 판촉 안내 및 경품 발송(주소), 만족도 조사, 시장 조사<br/>
                     <br/>
                     <span class="has-text-link">제 3조 보유·이용 기간</span><br/>
                     수집·이용 동의일로부터 회원 탈퇴 시 까지<br/>
