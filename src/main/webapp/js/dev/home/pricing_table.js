@@ -133,8 +133,8 @@ const main = (function () {
     if (price > 0) {
       const dueDate = getDueDate();
       IMP.request_pay({
-        pg : 'html5_inicis',
-        // pg : pg,
+        // pg : 'html5_inicis',
+        pg : pg,
         pay_method : 'vbank',
         vbank_due: dueDate,
         merchant_uid : cmmUtils.getUUID(),
