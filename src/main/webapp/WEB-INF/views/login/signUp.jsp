@@ -3,9 +3,10 @@
 
 <nav class="level">
     <div class="level-item">
-        <img style="width: 300px;" src="${pageContext.request.contextPath}/resources/images/logo/horizontal/logo.png">
+        <img style="width: 200px;" src="${pageContext.request.contextPath}/resources/images/logo/horizontal/logo.png">
     </div>
 </nav>
+
 <nav class="level">
     <div class="level-item has-text-left">
         <div class="field loginField">
