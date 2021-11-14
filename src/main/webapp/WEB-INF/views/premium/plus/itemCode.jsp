@@ -41,7 +41,7 @@
     </div>
  </div>
 
-<div class="box mt-3">
+<div class="box mt-3" style="min-height: 80vh;">
     <p id="initParagraph" class="has-text-grey-light">종목을 검색하세요.</p>
     <div class="table-container">
         <table id="profileGrid" class="table table is-bordered is-narrow is-hoverable is-fullwidth"></table>
