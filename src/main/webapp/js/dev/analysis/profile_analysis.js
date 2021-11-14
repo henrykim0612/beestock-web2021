@@ -1307,9 +1307,9 @@ const main = (function() {
       eId: 'stackChartGrid',
       isThead: true,
       isTfoot: false,
-      isPageLoader: true,
       singleSorting: true,
       refreshHeader: true,
+      loadingTextId: 'stackGridDiv',
       fileName: global.selectedQuarterDate,
       colModel: [
         {id: 'rowNum', name: 'No', align: 'center', isExcel: true},
@@ -1373,6 +1373,12 @@ const main = (function() {
   // 왼쪽 종목코드 클릭 차트
   function initLeftItemCodeChart() {
     removeRefreshTimer(); // 타이머 해제
+    if (!!leftItemCodeChart) {
+      leftItemCodeChart.dispose();
+      leftItemCodeChart = new COMPONENTS.LoadingChart('leftItemCodeChart');
+    } else {
+      leftItemCodeChart = new COMPONENTS.LoadingChart('leftItemCodeChart');
+    }
     getLeftItemCodeChartInfo(function(response) {
       // 분기에 Q 값 표시
       response['categories'] = response['categories'].map(function(e) { return e + 'Q'; });
@@ -1631,7 +1637,7 @@ const main = (function() {
         itemCode: global.selectedItemCode,
         profileTitle: global.profileTitle,
         filterNum: getSelectedStackChartFilter()
-      }
+      },
     }, callback);
   }
 

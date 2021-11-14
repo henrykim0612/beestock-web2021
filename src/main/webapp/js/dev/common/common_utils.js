@@ -1380,6 +1380,17 @@ const cmmUtils = (function () {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   }
 
+  function appendLoadingDiv(id) {
+    const div = document.createElement('div');
+    div.id = 'loadingText';
+    div.innerText = 'Loading...';
+    document.getElementById(id).appendChild(div);
+  }
+
+  function removeLoadingDiv() {
+    document.getElementById('loadingText').remove();
+  }
+
   return {
     axiosGet: axiosGet,
     awaitAxiosGet: awaitAxiosGet,
@@ -1475,6 +1486,8 @@ const cmmUtils = (function () {
     resetCheckedItems: resetCheckedItems,
     getTomorrow: getTomorrow,
     getChroma: getChroma,
-    isMobile: isMobile
+    isMobile: isMobile,
+    appendLoadingDiv: appendLoadingDiv,
+    removeLoadingDiv: removeLoadingDiv
   }
 })();

@@ -31,9 +31,9 @@ BeeComponents.modules.dataGrid = function(component) {
 
     // 페이징 사이즈
     if (props['pId'] != null) {
-      const pagenation = document.getElementById(props['pId']).querySelector('[data-custom=pageSel]');
+      const pagination = document.getElementById(props['pId']).querySelector('[data-custom=pageSel]');
       if (body['pageSize'] == null) {
-        body['pageSize'] = pagenation != null ? pagenation.value : 100;
+        body['pageSize'] = pagination != null ? pagination.value : 100;
       }
     }
 
@@ -42,6 +42,9 @@ BeeComponents.modules.dataGrid = function(component) {
     }
     if (props['isPageLoader'] != null && props['isPageLoader']) {
       cmmUtils.showPageLoader();
+    }
+    if (props['loadingTextId'] != null) {
+      cmmUtils.appendLoadingDiv(props['loadingTextId']);
     }
 
     cmmUtils.axiosPost({
@@ -91,7 +94,9 @@ BeeComponents.modules.dataGrid = function(component) {
 
       if (props['loading'] != null) cmmUtils.hideLoadingElement(document.getElementById(props['loading']));
       if (props['isPageLoader'] != null && props['isPageLoader']) cmmUtils.hidePageLoader();
-
+      if (props['loadingTextId'] != null) {
+        cmmUtils.removeLoadingDiv();
+      }
     });
 
   }

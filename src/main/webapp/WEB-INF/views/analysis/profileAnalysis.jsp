@@ -646,7 +646,7 @@
                 <div class="flex-row justify-content-center">
                     <div id="leftItemCodeChart" class="is-fullwidth" style="width: 1200px; height: 500px;"></div>
                 </div>
-                <div class="flex-row justify-content-center height500px">
+                <div id="stackGridDiv" class="flex-row justify-content-center" style="max-height: 500px;">
                     <div class="table-container overflowY-auto">
                         <table id="stackChartGrid" class="table table is-bordered is-narrow is-hoverable is-fullwidth"></table>
                     </div>

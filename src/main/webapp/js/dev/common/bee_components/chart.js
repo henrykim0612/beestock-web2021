@@ -16,4 +16,10 @@ BeeComponents.modules.chart = function(component) {
     return chart;
   }
 
+  component.LoadingChart = function(id) {
+    const chart = echarts.init(document.getElementById(id), 'roma');
+    chart.showLoading();
+    return chart;
+  }
+
 }
