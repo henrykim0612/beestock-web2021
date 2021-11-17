@@ -403,17 +403,17 @@ const main = (function () {
       singleSorting: true,
       refreshHeader: true,
       fileName: global.selectedQuarterDate,
+      defaultSort: {key: 'viewWeight', orderBy: 'desc'},
       colModel: [
         {id: 'itemCode', isHidden: true},
-        {id: 'rowNum', name: 'No', align: 'center', isExcel: true},
-        {id: 'profileTitle', name: '포트폴리오', width: global.width.profileTitle, isSort: true, align: 'left', isExcel: true, type: 'node', userCustom: titleAnchor},
-        {id: 'itemName', name: '종목명', width: global.width.itemName, isSort: true, align: 'left', isExcel: true, type: 'node', userCustom: itemName, hasTooltip: {col: 'itemName', valueOnly: true}},
-        {id: 'viewWeight', name: '비중', width: global.width.viewWeight, isSort: true, align: 'center', prefixText: '%', isExcel: true, hasTooltip: {col: 'itemName'}},
-        {id: 'quantity', name: '보유수량', width: global.width.quantity, isSort: true, align: 'right', isCurrency: true, type: 'node', userCustom: customQuantity, isExcel: true, hasTooltip: {col: 'itemName'}},
-        {id: 'buyingPrice', name: '평균 매수가', width: global.width.buyingPrice, isSort: true, align: 'right', userCustomHeader: bpHeader, type: 'node', userCustom: customBp, isCurrency: true, isExcel: true, hasTooltip: {col: 'itemName'}},
-        {id: 'currPrice', name: '현재가', width: global.width.currPrice, isSort: true, align: 'right', zeroRpad: global.selectedProfileType !== 1, isCurrency: true, userCustomHeader: currPriceHeader , isExcel: true, hasTooltip: {col: 'itemName'}},
-        {id: 'buyingSellingPrice', name: global.bspName, width: global.width.buyingSellingPrice, isSort: true, align: 'center', type: 'node', userCustomHeader: bspHeader, userCustom: buyingSellingPrice, isExcel: true, hasTooltip: {col: 'itemName'}},
-        {id: 'earnRate', name: '수익률', width: global.width.earnRate, isSort: true, align: 'center', type: 'node', userCustom: earnRate, isExcel: true, hasTooltip: {col: 'itemName'}}
+        {id: 'profileTitle', name: '포트폴리오', width: global.width.profileTitle, align: 'left', isExcel: true, type: 'node', userCustom: titleAnchor},
+        {id: 'itemName', name: '종목명', width: global.width.itemName, align: 'left', isExcel: true, type: 'node', userCustom: itemName, hasTooltip: {col: 'itemName', valueOnly: true}},
+        {id: 'viewWeight', name: '비중', width: global.width.viewWeight, align: 'center', prefixText: '%', isExcel: true, hasTooltip: {col: 'itemName'}},
+        {id: 'quantity', name: '보유수량', width: global.width.quantity, align: 'right', isCurrency: true, type: 'node', userCustom: customQuantity, isExcel: true, hasTooltip: {col: 'itemName'}},
+        {id: 'buyingPrice', name: '평균 매수가', width: global.width.buyingPrice, align: 'right', userCustomHeader: bpHeader, type: 'node', userCustom: customBp, isCurrency: true, isExcel: true, hasTooltip: {col: 'itemName'}},
+        {id: 'currPrice', name: '현재가', width: global.width.currPrice, align: 'right', zeroRpad: global.selectedProfileType !== 1, isCurrency: true, userCustomHeader: currPriceHeader , isExcel: true, hasTooltip: {col: 'itemName'}},
+        {id: 'buyingSellingPrice', name: global.bspName, width: global.width.buyingSellingPrice, align: 'center', type: 'node', userCustomHeader: bspHeader, userCustom: buyingSellingPrice, isExcel: true, hasTooltip: {col: 'itemName'}},
+        {id: 'earnRate', name: '수익률', width: global.width.earnRate, align: 'center', type: 'node', userCustom: earnRate, isExcel: true, hasTooltip: {col: 'itemName'}}
       ],
       success: function (data, _this) {
         setGridTooltips();

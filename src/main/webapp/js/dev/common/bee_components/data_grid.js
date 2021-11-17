@@ -45,15 +45,20 @@ BeeComponents.modules.dataGrid = function(component) {
     }
     if (props['loadingTextId'] != null) {
       cmmUtils.appendLoadingDiv(props['loadingTextId']);
+      if (props['loadingHiddenId'] != null) {
+        document.getElementById(props['loadingHiddenId']).classList.add('is-hidden');
+      }
     }
 
     cmmUtils.axiosPost({
       url: props['url'],
       body: body
     }, function (response) {
-
       props['data'] = response; // 결과값을 추가함
       props['rowData'] = props['data']['rowData'] != null ? props['data']['rowData'] : props['data'];
+      if (props['defaultSort'] != null) {
+        props['rowData'] = _.cloneDeep(_.orderBy(props['rowData'], [props['defaultSort']['key']], [props['defaultSort']['orderBy']]));
+      }
 
       const table = document.getElementById(props['eId']);
       const tbody = table.querySelector('tbody');
@@ -96,6 +101,9 @@ BeeComponents.modules.dataGrid = function(component) {
       if (props['isPageLoader'] != null && props['isPageLoader']) cmmUtils.hidePageLoader();
       if (props['loadingTextId'] != null) {
         cmmUtils.removeLoadingDiv();
+        if (props['loadingHiddenId'] != null) {
+          document.getElementById(props['loadingHiddenId']).classList.remove('is-hidden');
+        }
       }
     });
 
