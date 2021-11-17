@@ -70,9 +70,9 @@
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
-    <!--세션 60분 유지-->
+    <!--세션 60 * 24분 유지-->
     <session-config>
-        <session-timeout>60</session-timeout>
+        <session-timeout>1440</session-timeout>
     </session-config>
 
     <!-- error 페이지 설정 -->

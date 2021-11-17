@@ -5,12 +5,12 @@
     <parent>
         <artifactId>beestock-parent-dev</artifactId>
         <groupId>com.beestock</groupId>
-        <version>1.9.7-SNAPSHOT</version>
+        <version>1.9.8-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>beestock-web-dev</artifactId>
-    <version>1.9.7-SNAPSHOT</version>
+    <version>1.9.8-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <dependencies>
@@ -18,7 +18,7 @@
         <dependency>
             <artifactId>beestock-core-dev</artifactId>
             <groupId>com.beestock</groupId>
-            <version>1.9.7-SNAPSHOT</version>
+            <version>1.9.8-SNAPSHOT</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.springframework/spring -->
@@ -185,7 +185,7 @@
                     -->
                     <packagingExcludes>
                         <!--메모리 누수가 있다고 톰캣의 bin/lib에 해당 jar를 넣어놓으라는 메세지를 반영함-->
-                        WEB-INF/lib/postgresql-42.2.14.jre7.jar
+                        WEB-INF/lib/postgresql-42.3.1.jar
 <!--                        js/dev/**-->
                     </packagingExcludes>
                 </configuration>
