@@ -65,18 +65,18 @@ const main = (function() {
     // Guest 는 New 뱃지를 보여주지 않음
     const colModel = document.getElementById('loginId')
       ? [
-        {id: 'rowNum', name: 'No', isSort: true, isStrong: true, align: 'center'},
+        {id: 'rowNum', name: 'No', align: 'center'},
         {name: '', type: 'custom', userCustom: pinned, width: '50px', align: 'center'},
         {name:'', type: 'custom', userCustom: dday, width: '50px', align: 'center'},
-        {id: 'noticeTitle', name: '제목', isSort: true, isLink: true, userCustom: titleAnchor, hasBadge: 'isRead', hasBadgeText: 'New'},
-        {id: 'regDate', name: '게시일',isSort: true, width: '120px', align: 'center'}
+        {id: 'noticeTitle', name: '제목', isLink: true, userCustom: titleAnchor, hasBadge: 'isRead', hasBadgeText: 'New'},
+        {id: 'regDate', name: '게시일', width: '120px', align: 'center'}
       ]
       : [
-        {id: 'rowNum', name: 'No', isSort: true, isStrong: true, align: 'center'},
+        {id: 'rowNum', name: 'No', align: 'center'},
         {name: '', type: 'custom', userCustom: pinned, width: '50px', align: 'center'},
         {name:'', type: 'custom', userCustom: dday, width: '50px', align: 'center'},
-        {id: 'noticeTitle', name: '제목', isSort: true, isLink: true, userCustom: titleAnchor},
-        {id: 'regDate', name: '게시일',isSort: true, width: '120px', align: 'center'}
+        {id: 'noticeTitle', name: '제목', isLink: true, userCustom: titleAnchor},
+        {id: 'regDate', name: '게시일', width: '120px', align: 'center'}
       ];
 
     const props = {
