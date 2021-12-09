@@ -297,8 +297,20 @@ const main = (function () {
       global.maxPositiveBsp = _.maxBy(cmmUtils.getAbsValues(positiveValues, 'buyingSellingPrice'));
     }
 
-    const percent = parseInt(cmmUtils.getPercentage(row['buyingSellingPrice'], row['buyingSellingPrice'] < 0 ? global.maxNegativeBsp : global.maxPositiveBsp, true).toFixed(1));
-    const barDiv = cmmUtils.createAnalysisBar(percent,  cmmUtils.roundCurrency(row['buyingSellingPrice'], 1000000, 1).toLocaleString());
+    let percent = parseInt(cmmUtils.getPercentage(row['buyingSellingPrice'], row['buyingSellingPrice'] < 0 ? global.maxNegativeBsp : global.maxPositiveBsp, true).toFixed(1));
+    let viewBsp = cmmUtils.roundCurrency(row['buyingSellingPrice'], 1000000, 1).toLocaleString();
+
+    // 국내인 경우 마이너스 값들은 매도 금액에 해당하는데, 우리는 국내 매도금액을 계산 할 수 없으므로 0으로 처리해버림
+    if (global.selectedProfileType === 1 && percent < 0) {
+      percent = 0;
+      viewBsp = '0';
+    }
+    // 국내이고 QoQ 가 0보다 작다면 매수금액은 0으로 처리함(원본 데이터의 문제)
+    if (global.selectedProfileType === 1 && row['incsRate'] < 0) {
+      percent = 0;
+      viewBsp = '0';
+    }
+    const barDiv = cmmUtils.createAnalysisBar(percent,  viewBsp);
 
     // const barDiv = cmmUtils.createAnalysisBar(parseInt(percent),  v.toLocaleString());
     barDiv.classList.add('width-100-p');
@@ -425,8 +437,8 @@ const main = (function () {
   }
 
   function setGridTooltips() {
-    cmmUtils.setTippy([{selector: '.bpHeader', content: '단위: 달러'}]);
-    cmmUtils.setTippy([{selector: '.bspHeader', content: '단위: 백만달러'}]);
+    cmmUtils.setTippy([{selector: '.bpHeader', content: global.selectedProfileType === 1 ? '단위: 원' : '단위: 달러'}]);
+    cmmUtils.setTippy([{selector: '.bspHeader', content: global.selectedProfileType === 1 ? '단위: 백만원' : '단위: 백만달러'}]);
   }
 
   function initClipboard() {
