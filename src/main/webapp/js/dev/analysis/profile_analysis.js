@@ -620,8 +620,8 @@ const main = (function() {
         percent = 0;
         viewBsp = '0';
       }
-      // 국내이고 QoQ 가 0보다 작다면 매수금액은 0으로 처리함(원본 데이터의 문제)
-      if (global.selectedProfileType === '1' && row['incsRate'] <= 0) {
+      // 국내이고 신규편입이 아니고 QoQ 가 0보다 작다면 매수금액은 0으로 처리함(원본 데이터의 문제)
+      if (global.selectedProfileType === '1' && row['itemStatus'] !== 1 && row['incsRate'] <= 0) {
         percent = 0;
         viewBsp = '0';
       }
