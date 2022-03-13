@@ -56,13 +56,13 @@
         <div class="tile is-child box">
             <div id="headerTabs" class="tabs is-boxed">
                 <ul>
-                    <li id="benchmarkTab" class="is-active topTabs" data-cont-id="benchmarkCont">
+                    <li id="benchmarkTab" class="topTabs is-hidden" data-cont-id="benchmarkCont">
                         <a>
                             <span class="icon has-text-primary"><i class="fas fa-gem"></i></span>
                             <span>벤치마크 지수</span>
                         </a>
                     </li>
-                    <li id="fundamentalTab" class="topTabs" data-cont-id="fundamentalCont">
+                    <li id="fundamentalTab" class="is-active topTabs" data-cont-id="fundamentalCont">
                         <a>
                             <span class="icon has-text-primary"><i class="fas fa-gem"></i></span>
                             <span>운용자산 규모</span>
@@ -97,7 +97,7 @@
                 </ul>
             </div>
             <%--Benchmark 내용--%>
-            <div id="benchmarkCont">
+            <div id="benchmarkCont" class="is-hidden">
                 <div class="columns">
                     <div class="column is-full">
                         <div class="flex-col justify-content-center">
@@ -108,7 +108,7 @@
                 </div>
             </div>
             <%--Fundamental 내용--%>
-            <div id="fundamentalCont" class="is-hidden">
+            <div id="fundamentalCont">
                 <div class="columns">
                     <div class="column is-full">
                         <div class="flex-col justify-content-center">
