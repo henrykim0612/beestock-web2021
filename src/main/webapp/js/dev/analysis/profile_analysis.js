@@ -157,7 +157,7 @@ const main = (function() {
   function init() {
     createBreadCrumb();
     setInitialValues();
-    initTabs();
+    // initTabs();
     setParamQuarterDate();
     getProfileDetails();
     initQuarterSlider();
@@ -2082,7 +2082,7 @@ const main = (function() {
     // Fundamental 지수
     initFundamentalChart(data['profileId'], data['profileType'], data['profileTitle']);
     if (document.getElementById('benchmarkTab')) {
-      initBenchmarkChart(data['profileId'], data['profileType'], data['profileTitle']);
+      // initBenchmarkChart(data['profileId'], data['profileType'], data['profileTitle']);
     }
     // 즐겨찾기
     if ((data['isFavorite'])) {
