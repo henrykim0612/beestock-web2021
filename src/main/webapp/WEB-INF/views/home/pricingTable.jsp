@@ -12,9 +12,14 @@
     </div>
 </article>
 
-<article class="message is-warning">
-    <div id="rightChartMsgBody" class="message-body has-text-grey">
-        유사투자 자문업 성행으로 피해사례가 늘어나, 주식관련 정보를 제공하는 유료 서비스는 <strong>신용카드 결제</strong>가 전면적으로 불가한 상태이므로, <strong>가상계좌 이체</strong>로 운영되고 있음을 양해 부탁드립니다.
+<%--<article class="message is-warning">--%>
+<%--    <div id="rightChartMsgBody" class="message-body has-text-grey">--%>
+<%--        유사투자 자문업 성행으로 피해사례가 늘어나, 주식관련 정보를 제공하는 유료 서비스는 <strong>신용카드 결제</strong>가 전면적으로 불가한 상태이므로, <strong>가상계좌 이체</strong>로 운영되고 있음을 양해 부탁드립니다.--%>
+<%--    </div>--%>
+<%--</article>--%>
+<article class="message is-danger">
+    <div class="message-body has-text-grey">
+        <strong>서비스 종료일(6월 20일)</strong>까지 유료 서비스 결제는 중단되었습니다. 새롭게 오픈될 BEESTOCK에 많은 관심 부탁드리며, 더 향상된 사이트로 찾아뵙겠습니다.
     </div>
 </article>
 
@@ -81,7 +86,7 @@
         </div>
         <div class="plan-footer">
             <sec:authorize access="hasRole('ROLE_BASIC')">
-                <button class="button is-fullwidth" onclick="main.upgrade('ROLE_STANDARD')">업그레이드하기</button>
+                <button class="button is-fullwidth" disabled>업그레이드하기</button>
             </sec:authorize>
             <sec:authorize access="hasAnyRole('ROLE_STANDARD', 'ROLE_PREMIUM', 'ROLE_PREMIUM_PLUS')">
                 <button disabled class="button is-fullwidth">업그레이드하기</button>
@@ -102,7 +107,7 @@
         </div>
         <div class="plan-footer">
             <sec:authorize access="hasAnyRole('ROLE_BASIC', 'ROLE_STANDARD')">
-                <button class="button is-fullwidth" onclick="main.upgrade('ROLE_PREMIUM')">업그레이드하기</button>
+                <button class="button is-fullwidth" disabled>업그레이드하기</button>
             </sec:authorize>
             <sec:authorize access="hasAnyRole('ROLE_PREMIUM', 'ROLE_PREMIUM_PLUS')">
                 <button disabled class="button is-fullwidth">업그레이드하기</button>
@@ -123,7 +128,7 @@
         </div>
         <div class="plan-footer">
             <sec:authorize access="hasAnyRole('ROLE_BASIC', 'ROLE_STANDARD', 'ROLE_PREMIUM')">
-                <button class="button is-fullwidth" onclick="main.upgrade('ROLE_PREMIUM_PLUS')">업그레이드하기</button>
+                <button class="button is-fullwidth" disabled>업그레이드하기</button>
             </sec:authorize>
             <sec:authorize access="hasRole('ROLE_PREMIUM_PLUS')">
                 <button disabled class="button is-fullwidth">업그레이드하기</button>
@@ -178,7 +183,7 @@
         </div>
         <div class="plan-footer">
             <sec:authorize access="hasRole('ROLE_BASIC')">
-                <button class="button is-fullwidth" onclick="main.upgrade('ROLE_STANDARD')">업그레이드하기</button>
+                <button class="button is-fullwidth" disabled>업그레이드하기</button>
             </sec:authorize>
             <sec:authorize access="hasAnyRole('ROLE_STANDARD', 'ROLE_PREMIUM', 'ROLE_PREMIUM_PLUS')">
                 <button disabled class="button is-fullwidth">업그레이드하기</button>
@@ -199,7 +204,7 @@
         </div>
         <div class="plan-footer">
             <sec:authorize access="hasAnyRole('ROLE_BASIC', 'ROLE_STANDARD')">
-                <button class="button is-fullwidth" onclick="main.upgrade('ROLE_PREMIUM')">업그레이드하기</button>
+                <button class="button is-fullwidth" disabled>업그레이드하기</button>
             </sec:authorize>
             <sec:authorize access="hasAnyRole('ROLE_PREMIUM', 'ROLE_PREMIUM_PLUS')">
                 <button disabled class="button is-fullwidth">업그레이드하기</button>
@@ -220,7 +225,7 @@
         </div>
         <div class="plan-footer">
             <sec:authorize access="hasAnyRole('ROLE_BASIC', 'ROLE_STANDARD', 'ROLE_PREMIUM')">
-                <button class="button is-fullwidth" onclick="main.upgrade('ROLE_PREMIUM_PLUS')">업그레이드하기</button>
+                <button class="button is-fullwidth" disabled>업그레이드하기</button>
             </sec:authorize>
             <sec:authorize access="hasRole('ROLE_PREMIUM_PLUS')">
                 <button disabled class="button is-fullwidth">업그레이드하기</button>
