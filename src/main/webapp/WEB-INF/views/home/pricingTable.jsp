@@ -18,8 +18,8 @@
 <%--    </div>--%>
 <%--</article>--%>
 <article class="message is-danger">
-    <div class="message-body has-text-grey">
-        <strong>서비스 종료일(6월 20일)</strong>까지 유료 서비스 결제는 중단되었습니다. 새롭게 오픈될 BEESTOCK에 많은 관심 부탁드리며, 더 향상된 사이트로 찾아뵙겠습니다.
+    <div class="message-body">
+        <strong>서비스 종료일(6월 20일)</strong>까지 유료 서비스는 중단되었습니다. 새롭게 오픈될 BEESTOCK에 많은 관심 부탁드리며, 더 향상된 사이트로 찾아뵙겠습니다.
     </div>
 </article>
 
