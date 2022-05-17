@@ -19,7 +19,7 @@
 <%--</article>--%>
 <article class="message is-danger">
     <div class="message-body">
-        <strong>서비스 종료일(6월 20일)</strong>까지 유료 서비스는 중단되었습니다. 새롭게 오픈될 BEESTOCK에 많은 관심 부탁드리며, 더 향상된 사이트로 찾아뵙겠습니다.
+        <strong>2022년 6월 20일</strong> 이후 서비스가 중단될 예정입니다. 자세한 내용은 공지사항을 확인해주세요.
     </div>
 </article>
 
